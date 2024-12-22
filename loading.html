@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/NeoLogo.webp">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <title>Bouncing Balls Loading</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(135deg, #05003B, #05003B, #b2911c);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .loading-screen {
+    text-align: center;
+  }
+
+  .logo {
+    width: 300px; /* Increased size */
+    height: auto;
+    margin-bottom: 1px;
+  }
+
+  .bouncing-balls {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 50px;
+    gap: 10px;
+  }
+
+  .ball {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: bounce 1s infinite ease-in-out;
+  }
+
+  .ball:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .ball:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+</style>
+<body>
+  <div class="loading-screen">
+    <!-- Logo -->
+    <img src="/NeoLogo.png" alt="Logo" class="logo">
+    <div class="bouncing-balls">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    <p style="font-size: 35px;">Loading...</p>
+  </div>
+</body>
+</html>
